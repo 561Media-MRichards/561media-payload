@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: unset;
+    font-weight: unset;
+  }
+
+  /* 561 Media Brand Colors - Light Mode */
+  :root {
+    --background: 60 31% 92%;           /* Off-white #f1f1e6 */
+    --foreground: 202 47% 19%;          /* Navy #1a3648 */
+
+    --card: 0 0% 100%;                  /* White */
+    --card-foreground: 202 47% 19%;     /* Navy */
+
+    --popover: 0 0% 100%;               /* White */
+    --popover-foreground: 202 47% 19%;  /* Navy */
+
+    --primary: 17 85% 55%;              /* Orange #ec6a2a */
+    --primary-foreground: 0 0% 100%;    /* White */
+
+    --secondary: 205 54% 38%;           /* Medium Blue #2d6b97 */
+    --secondary-foreground: 0 0% 100%;  /* White */
+
+    --muted: 60 20% 85%;                /* Muted off-white */
+    --muted-foreground: 202 30% 40%;    /* Muted navy */
+
+    --accent: 205 92% 65%;              /* Light Blue #54baf8 */
+    --accent-foreground: 202 47% 19%;   /* Navy */
+
+    --destructive: 0 84% 60%;           /* Red */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 202 30% 80%;              /* Light navy border */
+    --input: 202 30% 90%;               /* Light input background */
+    --ring: 17 85% 55%;                 /* Orange ring */
+
+    --radius: 0.5rem;
+
+    --success: 142 76% 36%;             /* Green */
+    --warning: 38 92% 50%;              /* Warning orange */
+    --error: 0 84% 60%;                 /* Red */
+  }
+
+  /* 561 Media Brand Colors - Dark Mode */
+  [data-theme='dark'] {
+    --background: 202 47% 19%;          /* Navy #1a3648 */
+    --foreground: 60 31% 92%;           /* Off-white #f1f1e6 */
+
+    --card: 202 47% 15%;                /* Darker navy */
+    --card-foreground: 60 31% 92%;      /* Off-white */
+
+    --popover: 202 47% 15%;             /* Darker navy */
+    --popover-foreground: 60 31% 92%;   /* Off-white */
+
+    --primary: 17 85% 55%;              /* Orange #ec6a2a */
+    --primary-foreground: 0 0% 100%;    /* White */
+
+    --secondary: 205 54% 38%;           /* Medium Blue #2d6b97 */
+    --secondary-foreground: 0 0% 100%;  /* White */
+
+    --muted: 202 47% 25%;               /* Muted navy */
+    --muted-foreground: 60 20% 70%;     /* Muted off-white */
+
+    --accent: 205 92% 65%;              /* Light Blue #54baf8 */
+    --accent-foreground: 202 47% 19%;   /* Navy */
+
+    --destructive: 0 62% 30%;           /* Dark red */
+    --destructive-foreground: 60 31% 92%;
+
+    --border: 202 30% 30%;              /* Dark navy border */
+    --input: 202 47% 25%;               /* Dark input background */
+    --ring: 17 85% 55%;                 /* Orange ring */
+
+    --success: 142 76% 25%;             /* Dark green */
+    --warning: 38 70% 35%;              /* Dark warning */
+    --error: 0 62% 40%;                 /* Dark red */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground min-h-[100vh] flex flex-col;
+  }
+}
+
+/* Gradient text utility for hero headlines */
+.text-gradient {
+  background: linear-gradient(135deg, hsl(17, 85%, 55%) 0%, hsl(205, 92%, 65%) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+html {
+  opacity: 0;
+}
+
+html[data-theme='dark'],
+html[data-theme='light'] {
+  opacity: initial;
+}
