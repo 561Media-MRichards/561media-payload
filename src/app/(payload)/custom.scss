@@ -1,0 +1,268 @@
+// 561 Media Admin Panel Branding
+// Custom theme colors matching the brand guidelines
+
+:root {
+  // Override Payload's default theme with 561 Media colors
+
+  // Navy backgrounds (elevation scale)
+  --theme-elevation-0: #1a3648 !important;
+  --theme-elevation-50: #1e3a4c !important;
+  --theme-elevation-100: #223e50 !important;
+  --theme-elevation-150: #264254 !important;
+  --theme-elevation-200: #2a4658 !important;
+  --theme-elevation-250: #2e4a5c !important;
+  --theme-elevation-300: #324e60 !important;
+  --theme-elevation-350: #365264 !important;
+  --theme-elevation-400: #3a5668 !important;
+  --theme-elevation-450: #3e5a6c !important;
+  --theme-elevation-500: #425e70 !important;
+  --theme-elevation-550: #466274 !important;
+  --theme-elevation-600: #4a6678 !important;
+  --theme-elevation-650: #4e6a7c !important;
+  --theme-elevation-700: #526e80 !important;
+  --theme-elevation-750: #567284 !important;
+  --theme-elevation-800: #5a7688 !important;
+  --theme-elevation-850: #5e7a8c !important;
+  --theme-elevation-900: #f1f1e6 !important;
+  --theme-elevation-950: #f5f5ec !important;
+  --theme-elevation-1000: #ffffff !important;
+
+  // Text color - off-white
+  --theme-text: #f1f1e6 !important;
+
+  // 561 Media Orange as primary/accent
+  --theme-success-500: #22c55e !important;
+  --theme-error-500: #ef4444 !important;
+  --theme-warning-500: #ff8400 !important;
+
+  // Input backgrounds
+  --theme-input-bg: #223e50 !important;
+}
+
+// Primary button styling with 561 Media Orange
+.btn--style-primary,
+.btn--style-secondary {
+  background-color: #ec6a2a !important;
+  border-color: #ec6a2a !important;
+  color: #ffffff !important;
+
+  &:hover,
+  &:focus {
+    background-color: #d85a1e !important;
+    border-color: #d85a1e !important;
+  }
+}
+
+// Login/Create user page background
+.template-default.template-default--dark,
+.login,
+.create-first-user {
+  background: linear-gradient(135deg, #1a3648 0%, #2d6b97 50%, #1a3648 100%) !important;
+}
+
+// App header/navbar
+.template-default__nav,
+.nav {
+  background-color: #1a3648 !important;
+  border-right: 1px solid rgba(241, 241, 230, 0.1) !important;
+}
+
+// Nav links
+.nav__link {
+  color: #f1f1e6 !important;
+
+  &:hover {
+    background-color: rgba(236, 106, 42, 0.1) !important;
+  }
+
+  &.active {
+    background-color: rgba(236, 106, 42, 0.15) !important;
+    border-left: 3px solid #ec6a2a !important;
+  }
+}
+
+// Nav group labels
+.nav-group__toggle {
+  color: #f1f1e6 !important;
+
+  &:hover {
+    background-color: rgba(236, 106, 42, 0.1) !important;
+  }
+}
+
+// Document header
+.doc-header {
+  background-color: #1a3648 !important;
+}
+
+// Cards
+.card {
+  background-color: #223e50 !important;
+  border: 1px solid rgba(241, 241, 230, 0.1) !important;
+
+  &:hover {
+    border-color: #ec6a2a !important;
+  }
+}
+
+// Form inputs
+input,
+textarea,
+select,
+.react-select__control {
+  background-color: #223e50 !important;
+  border-color: rgba(241, 241, 230, 0.2) !important;
+  color: #f1f1e6 !important;
+
+  &:focus,
+  &:focus-within {
+    border-color: #ec6a2a !important;
+    box-shadow: 0 0 0 2px rgba(236, 106, 42, 0.2) !important;
+  }
+}
+
+// React Select (dropdowns)
+.react-select__menu {
+  background-color: #223e50 !important;
+  border: 1px solid rgba(241, 241, 230, 0.2) !important;
+}
+
+.react-select__option {
+  &:hover,
+  &--is-focused {
+    background-color: rgba(236, 106, 42, 0.2) !important;
+  }
+
+  &--is-selected {
+    background-color: #ec6a2a !important;
+  }
+}
+
+// Links
+a {
+  color: #54baf8 !important;
+
+  &:hover {
+    color: #ec6a2a !important;
+  }
+}
+
+// Table rows
+.table tr:hover {
+  background-color: rgba(236, 106, 42, 0.05) !important;
+}
+
+// Checkbox/Radio when checked
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: #ec6a2a !important;
+  border-color: #ec6a2a !important;
+}
+
+// Toggle switches
+.toggle-input:checked + .toggle-track {
+  background-color: #ec6a2a !important;
+}
+
+// Tabs
+.tabs-field__tab-button {
+  &:hover {
+    background-color: rgba(236, 106, 42, 0.1) !important;
+  }
+
+  &--active {
+    border-bottom-color: #ec6a2a !important;
+    color: #ec6a2a !important;
+  }
+}
+
+// Pills/Tags
+.pill {
+  background-color: rgba(84, 186, 248, 0.2) !important;
+  color: #54baf8 !important;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a3648;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2d6b97;
+  border-radius: 4px;
+
+  &:hover {
+    background: #3d7ba7;
+  }
+}
+
+// Step nav (sidebar in documents)
+.step-nav {
+  background-color: #1a3648 !important;
+}
+
+// Document controls
+.doc-controls {
+  background-color: #1a3648 !important;
+  border-top: 1px solid rgba(241, 241, 230, 0.1) !important;
+}
+
+// Rich text editor
+.rich-text-lexical {
+  background-color: #223e50 !important;
+  border-color: rgba(241, 241, 230, 0.2) !important;
+}
+
+// Toolbar
+.rich-text-lexical__toolbar {
+  background-color: #1a3648 !important;
+  border-bottom: 1px solid rgba(241, 241, 230, 0.1) !important;
+}
+
+// Modal/Drawer backgrounds
+.payload-drawer,
+.payload-modal {
+  background-color: #1a3648 !important;
+}
+
+// Focus states
+*:focus-visible {
+  outline-color: #ec6a2a !important;
+}
+
+// Welcome message on login
+.before-login,
+.before-dashboard {
+  color: #f1f1e6 !important;
+
+  a {
+    color: #ec6a2a !important;
+  }
+}
+
+// Dashboard welcome
+.dashboard__wrap {
+  h2, h3, h4 {
+    color: #f1f1e6 !important;
+  }
+}
+
+// Collection header buttons
+.collection-list__header {
+  .btn {
+    &:not(.btn--style-primary):not(.btn--style-secondary) {
+      color: #f1f1e6 !important;
+      border-color: rgba(241, 241, 230, 0.3) !important;
+
+      &:hover {
+        background-color: rgba(236, 106, 42, 0.1) !important;
+        border-color: #ec6a2a !important;
+      }
+    }
+  }
+}
